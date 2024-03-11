@@ -10,6 +10,11 @@
   </script>
 </head>
 
-s
+# Investigating the joint amplitude and phase imaging of stained samples
+
+**Quantitative Phase imaging Techniques(QPI)** : Allow the digitization of phase in complement to the intensity. This technique is suitable for oberserving transparent samples.
+
+
+
 
 
