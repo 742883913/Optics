@@ -18,3 +18,5 @@
 ## Catalog
 
 [Course by Andrew Ng](./ML/MachineLearning.md)
+
+[Python](./ML/Python.md)
