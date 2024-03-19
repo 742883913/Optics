@@ -84,3 +84,54 @@ str(x)|将x转换为字符串
 
                 公司名称：Wang 公司目前股价 10
                 每日增长系数为：0.01 ;经过 7 天后股价为 10.721  
+
+
+### 数据输入
+input 语句不管你输入的是什么都看作是字符串
+> input（）括号内可以放入提示作用的字符串
+
+                admin = input("你的银行账号是")
+                admin = int(admin)
+                num = input("余额为")
+                num = float(num)
+                print("你%d账号内的余额为%.2f" %(admin,num))
+                你的银行账号是 123
+                余额为 222
+                你123账号内的余额为222.00
+
+
+### 布尔类型和比较运算符
+
+  <div align="center"><img src="./Ppic/p1.png" width="400"></div>
+
+### 逻辑判断语句
+1. if else 组合
+        
+        age = input("你的年龄")
+        age = int(age)
+        if age >= 18:
+                print("你已经%d岁了，可以玩点花的了" %age)
+        else:
+                print("你还小，好好学习。")
+
+        你的年龄 20
+        你已经20岁了，可以玩点花的了
+
+2. if elif else 组合
+
+> 注意，判断语句之间是互斥的并且是按顺序执行的，满足一条语句后下面的语句就不会再执行
+
+        age = int(input("输入答案"))
+
+        if  int(input("输入你的答案")) == age:
+                print("猜对了")
+        elif int(input("再次输入你的答案")) == age:
+                print("你终于猜对了")
+        else:
+                print("给你机会你也不中用啊！")
+
+
+        输入答案 5
+        输入你的答案 6
+        再次输入你的答案 5
+        你终于猜对了
