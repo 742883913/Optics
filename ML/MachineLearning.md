@@ -18,6 +18,8 @@
     - [Learning rate choise](#learning-rate-choise)
     - [Kinds of gradient descent](#kinds-of-gradient-descent)
   - [Multiple linear regression](#multiple-linear-regression)
+    - [Vectorization](#vectorization)
+    - [The gradient descent in multiple linear regression](#the-gradient-descent-in-multiple-linear-regression)
 
 
 
@@ -103,3 +105,22 @@ If $\alpha$ is too small, the gradient descent will be very slow. But if $\alpha
  <div align="center"><img src="./Mpic/m8.png" width="500"></div>
 
 $$f_{\bar{w},b}(\bar{x})=\bar{w}\cdot \bar{x}+b =w_1x_1+w_2x_2+\cdots+b$$
+
+
+#### Vectorization
+
+We can short our code by victorization. We can use a tool called numpy. Here is the example.
+
+    w = np.array([1,2,3,4])
+    b = 4
+    x = np.array([10,20,30,30])
+    f = np.dot(w,x) + b
+
+#### The gradient descent in multiple linear regression
+
+ <div align="center"><img src="./Mpic/m9.png" width="500"></div>
+
+**Normal equation**: An alternative for gradient descent. It's for linear regression and may become slow if the n is too big. 
+
+
+
