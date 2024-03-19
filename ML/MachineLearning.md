@@ -17,6 +17,7 @@
   - [Gradient descent 梯度下降](#gradient-descent-梯度下降)
     - [Learning rate choise](#learning-rate-choise)
     - [Kinds of gradient descent](#kinds-of-gradient-descent)
+  - [Multiple linear regression](#multiple-linear-regression)
 
 
 
@@ -96,3 +97,9 @@ If $\alpha$ is too small, the gradient descent will be very slow. But if $\alpha
 
 1. Batch gradient descent 批量梯度下降 :
    Each step of gradient descent uses all the training samples.
+
+### Multiple linear regression
+
+ <div align="center"><img src="./Mpic/m8.png" width="500"></div>
+
+$$f_{\bar{w},b}(\bar{x})=\bar{w}\cdot \bar{x}+b =w_1x_1+w_2x_2+\cdots+b$$
