@@ -135,3 +135,47 @@ input 语句不管你输入的是什么都看作是字符串
         输入你的答案 6
         再次输入你的答案 5
         你终于猜对了
+
+
+### 循环语句
+
+1. while循环
+        
+        i = 0
+        while i<100:
+                print("我爱你")
+                i+=1
+
+例题：
+
+        import random
+        num = random.randint(1,100)
+        i = 1
+        num_guess = int(input("输入猜的值"))
+        while num_guess != num:
+                if num_guess > num:
+                        print("大了")
+                else:
+                        print("小了")
+                num_guess = int(input("再次输入猜的值"))
+                i += 1
+        print(num_guess,i)
+
+<div align="center"><img src="./Ppic/p2.png" width="400"></div>
+
+> end='':print(hello,end='')即可达到输出不换行，
+> \t可替代空格对齐单词，如pring("hello\tworld")
+
+2. for循环
+        1. 该循环无法控制循环条件
+        
+        for 临时变量 in 待处理数据集
+                开始循环
+        
+2. 可以通过range生成序列
+
+        range(num) 从0开始
+        range(num1,num2) 从num1开始不包含num2
+        range(num1,num2,step) 从num1开始不包含num2,步长为step
+
+3. for 中的变量只能在 for 中使用，如果想要在for外调用，可以在for 前面先定义变量。
