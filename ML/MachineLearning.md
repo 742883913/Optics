@@ -20,6 +20,9 @@
   - [Multiple linear regression](#multiple-linear-regression)
     - [Vectorization](#vectorization)
     - [The gradient descent in multiple linear regression](#the-gradient-descent-in-multiple-linear-regression)
+    - [Feature Scaling](#feature-scaling)
+    - [Checking if gradient descent is convergent](#checking-if-gradient-descent-is-convergent)
+    - [How to choose learning rate](#how-to-choose-learning-rate)
 
 
 
@@ -122,5 +125,41 @@ We can short our code by victorization. We can use a tool called numpy. Here is 
 
 **Normal equation**: An alternative for gradient descent. It's for linear regression and may become slow if the n is too big. 
 
+#### Feature Scaling
+
+Feature scaling is aimed at helping fasting the process of gradient descent. Because some ranges of features are too large and some are too small. We should normalize them.
+
+ <div align="center"><img src="./Mpic/m10.png" width="300"></div>
+
+We have three ways to normalize the features:
+1. the regular one
+    <div align="center"><img src="./Mpic/m11.png" width="300"></div>
+
+2. mean normalization
+    <div align="center"><img src="./Mpic/m12.png" width="300"></div>
+
+$\mu$ here is the average value of the feature.
+
+3. Z-score normalization
+
+ <div align="center"><img src="./Mpic/m13.png" width="400"></div>
+
+here standard deviation is 标准差
+
+#### Checking if gradient descent is convergent
+
+<div align="center"><img src="./Mpic/m14.png" width="400"></div>
+
+We can draw this learning curve to check its convergence. The cost function should decrease after each iteration. If not, you should check your learning rate $\alpha$ to see if it's too big.
+
+<div align="center"><img src="./Mpic/m15.png" width="300"></div>
+
+This method is not very depensible.
+
+#### How to choose learning rate
+
+<div align="center"><img src="./Mpic/m16.png" width="500"></div>
+
+To check if there is a bug, we can use a very small learning rate to see if the cost function is decreasing. If not, there's a bug.
 
 
