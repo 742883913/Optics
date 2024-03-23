@@ -13,20 +13,24 @@
 - [What is Machine Learning?](#what-is-machine-learning)
 - [Supervised learning 监督学习](#supervised-learning-监督学习)
   - [Linear regression model 线性回归模型](#linear-regression-model-线性回归模型)
-  - [Cost function 代价函数](#cost-function-代价函数)
-  - [Gradient descent 梯度下降](#gradient-descent-梯度下降)
-    - [Learning rate choise](#learning-rate-choise)
-    - [Kinds of gradient descent](#kinds-of-gradient-descent)
+    - [Cost function 代价函数](#cost-function-代价函数)
+    - [Gradient descent 梯度下降](#gradient-descent-梯度下降)
+      - [Learning rate choise](#learning-rate-choise)
+      - [Kinds of gradient descent](#kinds-of-gradient-descent)
   - [Multiple linear regression](#multiple-linear-regression)
     - [Vectorization](#vectorization)
     - [The gradient descent in multiple linear regression](#the-gradient-descent-in-multiple-linear-regression)
     - [Feature Scaling](#feature-scaling)
     - [Checking if gradient descent is convergent](#checking-if-gradient-descent-is-convergent)
     - [How to choose learning rate](#how-to-choose-learning-rate)
+  - [Polynomial regression](#polynomial-regression)
+  - [Logistic regression](#logistic-regression)
+    - [The model of logistic regression](#the-model-of-logistic-regression)
+    - [Decision boundary](#decision-boundary)
 
 
 
-## What is Machine Learning?
+# What is Machine Learning?
 
 The machine learning has two kinds of algorithms. One is **supervised learning**, one is **unsupervised  learning**.
 
@@ -37,9 +41,9 @@ The machine learning has two kinds of algorithms. One is **supervised learning**
 - **unsupervised learning**
   Data only comes with inputs x, but not outputs y. The algorithm has to find the some structure through the data. 
 
-## Supervised learning 监督学习
+# Supervised learning 监督学习
 
-### Linear regression model 线性回归模型
+## Linear regression model 线性回归模型
 
  <div align="center"><img src="./Mpic/m1.png" width="400"></div>
 
@@ -103,14 +107,14 @@ If $\alpha$ is too small, the gradient descent will be very slow. But if $\alpha
 1. Batch gradient descent 批量梯度下降 :
    Each step of gradient descent uses all the training samples.
 
-### Multiple linear regression
+## Multiple linear regression
 
  <div align="center"><img src="./Mpic/m8.png" width="500"></div>
 
 $$f_{\bar{w},b}(\bar{x})=\bar{w}\cdot \bar{x}+b =w_1x_1+w_2x_2+\cdots+b$$
 
 
-#### Vectorization
+### Vectorization
 
 We can short our code by victorization. We can use a tool called numpy. Here is the example.
 
@@ -119,13 +123,13 @@ We can short our code by victorization. We can use a tool called numpy. Here is 
     x = np.array([10,20,30,30])
     f = np.dot(w,x) + b
 
-#### The gradient descent in multiple linear regression
+### The gradient descent in multiple linear regression
 
  <div align="center"><img src="./Mpic/m9.png" width="500"></div>
 
 **Normal equation**: An alternative for gradient descent. It's for linear regression and may become slow if the n is too big. 
 
-#### Feature Scaling
+### Feature Scaling
 
 Feature scaling is aimed at helping fasting the process of gradient descent. Because some ranges of features are too large and some are too small. We should normalize them.
 
@@ -146,7 +150,7 @@ $\mu$ here is the average value of the feature.
 
 here standard deviation is 标准差
 
-#### Checking if gradient descent is convergent
+### Checking if gradient descent is convergent
 
 <div align="center"><img src="./Mpic/m14.png" width="400"></div>
 
@@ -156,10 +160,36 @@ We can draw this learning curve to check its convergence. The cost function shou
 
 This method is not very depensible.
 
-#### How to choose learning rate
+### How to choose learning rate
 
 <div align="center"><img src="./Mpic/m16.png" width="500"></div>
 
 To check if there is a bug, we can use a very small learning rate to see if the cost function is decreasing. If not, there's a bug.
+
+## Polynomial regression
+
+It's like $y=w_0+w_1x+w_2x^2\cdots$ and in this case, feature scaling becomes more important.
+
+## Logistic regression
+
+positive class: The set you want and need to output.
+
+negative class: The set you don't want and no need to do output.
+
+### The model of logistic regression
+
+<div align="center"><img src="./Mpic/m17.png" width="500"></div>
+
+$$f(\bar{x})=P(y=1|\bar{x};\bar{w},b)$$
+
+Means under the input x, the model think the possibility is 1 and it's under the influence of w and b.
+
+### Decision boundary
+
+The decision boundary is the curve when z=0. It can divide the positive and negative class.
+
+<div align="center"><img src="./Mpic/m18.png" width="200"></div>
+
+
 
 
