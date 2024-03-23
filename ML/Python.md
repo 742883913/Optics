@@ -164,18 +164,41 @@ input 语句不管你输入的是什么都看作是字符串
 <div align="center"><img src="./Ppic/p2.png" width="400"></div>
 
 > end='':print(hello,end='')即可达到输出不换行，
-> \t可替代空格对齐单词，如pring("hello\tworld")
+> \t可替代空格对齐单词，如pring("hello\tworld")；\n可换行
 
 2. for循环
-        1. 该循环无法控制循环条件
+   1. 该循环无法控制循环条件
         
-        for 临时变量 in 待处理数据集
-                开始循环
+                for 临时变量 in 待处理数据集
+                        开始循环
         
-2. 可以通过range生成序列
+   2. 可以通过range生成序列
 
-        range(num) 从0开始
-        range(num1,num2) 从num1开始不包含num2
-        range(num1,num2,step) 从num1开始不包含num2,步长为step
+                range(num) 从0开始
+                range(num1,num2) 从num1开始不包含num2
+                range(num1,num2,step) 从num1开始不包含num2,步长为step
 
-3. for 中的变量只能在 for 中使用，如果想要在for外调用，可以在for 前面先定义变量。
+   3. for 中的变量只能在 for 中使用，如果想要在for外调用，可以在for 前面先定义变量。
+
+3. continue 和 break
+
+continue : 结束本次循环，直接进行下次循环。且只能影响内层循环。
+
+break : 直接结束循环。同样只对内层循环生效。
+
+### 函数
+
+1. 函数的定义
+
+   1. 参数不需要可以省略
+   2. 返回值不需要可以省略
+
+   
+                def 函数名(输入参数):
+                        函数体
+                        return 返回值
+
+2. 函数返回值none类型
+   
+   1. 没定义返回值的，都会自动返回none，类型为type_none
+   2. 在if语句中，none就等同于false
