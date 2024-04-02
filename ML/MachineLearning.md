@@ -190,6 +190,35 @@ The decision boundary is the curve when z=0. It can divide the positive and nega
 
 <div align="center"><img src="./Mpic/m18.png" width="200"></div>
 
+### Cost function of logistic regression
 
+**The loss function:**
 
+<div align="center"><img src="./Mpic/m19.png" width="500"></div>
+
+When $\widehat{y} = 1$ :
+
+<div align="center"><img src="./Mpic/m20.png" width="500"></div>
+
+When $\widehat{y} = 0$ :
+
+<div align="center"><img src="./Mpic/m21.png" width="500"></div>
+
+**The cost function:**
+
+$$J = \frac{1}{m} \sum_{i=1}^m L(f(x^{i}),\widehat{y}^i)$$
+
+**Simplified cost function:**
+
+The two loss functions are the same actually:
+
+<div align="center"><img src="./Mpic/m22.png" width="500"></div>
+
+Then the cost function will turn into:
+
+$$J = \frac{1}{m}\sum_{i=1}^m -y^i \log f(x^i)-(1-y^i)\log(1-f(x^i))$$
+
+### Gradient descent
+
+<div align="center"><img src="./Mpic/m23.png" width="400"></div>
 
