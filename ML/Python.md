@@ -1,5 +1,5 @@
 
-<div align="center"><img src="/cover.png" width="800"></div>
+<div align="center"><img src="./cover1.png" width="800"></div>
 
 
 # 初级阶段学习
