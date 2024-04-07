@@ -1,22 +1,10 @@
-# Optics
+<div align="center"><img src="./cover.png" width="800"></div>
 
-### Catalog
 
-[Geometrical Optics](./GO.md)
+# IP Paris
 
-### Paper study
 
-[Fourier ptychographic microscopy image enhancement with bi-modal deep learning](./Paper1.md)
 
-[A Physics-Inspired Deep Learning Framework for an Efficient Fourier Ptychographic Microscopy Reconstruction under Low Overlap Conditions
-](./Paper2.md)
 
-[Investigating the joint amplitude and phase imaging of stained samples](./Paper3.md)
+[Basic preparation](prestudy.md)
 
-# Machine learning
-
-## Catalog
-
-[Course by Andrew Ng](./ML/MachineLearning.md)
-
-[Python](./ML/Python.md)

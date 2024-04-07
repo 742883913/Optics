@@ -1,3 +1,7 @@
+
+<div align="center"><img src="/cover.png" width="800"></div>
+
+
 # 初级阶段学习
 
 - [初级阶段学习](#初级阶段学习)

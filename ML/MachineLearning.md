@@ -10,6 +10,10 @@
   </script>
 </head>
 
+
+<div align="center"><img src="/cover.png" width="800"></div>
+
+
 - [What is Machine Learning?](#what-is-machine-learning)
 - [Supervised learning 监督学习](#supervised-learning-监督学习)
   - [Linear regression model 线性回归模型](#linear-regression-model-线性回归模型)
@@ -27,6 +31,8 @@
   - [Logistic regression](#logistic-regression)
     - [The model of logistic regression](#the-model-of-logistic-regression)
     - [Decision boundary](#decision-boundary)
+    - [Cost function of logistic regression](#cost-function-of-logistic-regression)
+    - [Gradient descent](#gradient-descent)
 
 
 
