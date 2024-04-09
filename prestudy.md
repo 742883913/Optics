@@ -12,6 +12,8 @@
 
 [Geometrical Optics](./GO.md)
 
+[毕设初始结构计算](./Bishe.md)
+
 ## Paper study for the Phd track:
 
 [1. Fourier ptychographic microscopy image enhancement with bi-modal deep learning](./Paper1.md)

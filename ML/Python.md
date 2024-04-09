@@ -7,17 +7,6 @@
 # 初级阶段学习
 
 
-
-<details>
-<summary>目录</summary>
-<pre><code>
-。。
-</code></pre>
-</details>
-
-
-
-
 ### 数据类型
 
 名称|类型
