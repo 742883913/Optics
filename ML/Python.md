@@ -465,3 +465,36 @@ break : 直接结束循环。同样只对内层循环生效。
 #### 文件的编码
 
 编码指如何将内容翻译成二进制并翻译回可识别内容。
+
+#### 文件的读取操作
+
+        open(name,mode,encoding) #name:要打开的文件的名称字符串或者是路径；mode:打开文件的格式（只读、写入、追加）；encoding：编码格式
+        open("D/~~","r",encoding="UTF-8")
+模式|描述
+---|---
+r|只读模式
+w|写入。如果该文件已存在，则从头编辑，并删除原有内容；如果没有打开，则新建一个
+a|追加。如果文件已存在，则在原文件之后写入；如果不存在，则新建一个文件
+
+#### 文件的操作
+
+        file.read(num) #读取文件num长度的内容，如果num不写则读取所有数据
+        file.readlines() #读取整个文件，并放在列表中输出
+        file.readline() #一次只读取一行，每调用一次就往下一行
+        file.close() #关闭文件
+        with open(name,mode,encoding) as f: #在完成操作后自动关闭文件
+        file.write() #文件写入，只写入内存
+        file.flush() #文件写入磁盘，和write组合使用，close内置了flush的功能
+
+> 文件的追加仅需将读取的模式设置为'a'即可，其他和写入一样。
+
+练习：
+
+        f = open("/Users/wangmusi/Library/Mobile Documents/com~apple~CloudDocs/Phython/test.txt","r")
+        g = open("/Users/wangmusi/Library/Mobile Documents/com~apple~CloudDocs/Phython/test2.txt","a")
+        for a in f:
+        a = a.strip()
+        if a.split("，")[2] == "测试":
+                continue
+        g.write(a)
+        g.write("\n")
