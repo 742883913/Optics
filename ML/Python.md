@@ -31,6 +31,12 @@
       - [lambda匿名函数](#lambda匿名函数)
     - [文件](#文件)
       - [文件的编码](#文件的编码)
+      - [文件的读取操作](#文件的读取操作)
+      - [文件的操作](#文件的操作)
+    - [异常](#异常)
+      - [异常的捕获](#异常的捕获)
+    - [模块](#模块)
+      - [模块的导入](#模块的导入)
 
 
 # 初级阶段学习
@@ -498,3 +504,52 @@ a|追加。如果文件已存在，则在原文件之后写入；如果不存在
                 continue
         g.write(a)
         g.write("\n")
+
+### 异常
+
+#### 异常的捕获
+
+        try:
+                ~~~~~~
+        except:
+                ~~~~~~
+        else:
+                ~~~~~~
+        finally:
+                ~~~~~~
+        ## try表示对可能出现异常的代码执行，如果有问题则执行except，没异常则运行else，无论有无异常都要执行finally
+
+        try:
+                ~~~~
+        except NameError as e:
+                ~~~~
+        ## 捕获指定的异常
+
+        try:
+                ~~~~
+        except (NameError,ZeroDevisionError) as e:
+                ~~~~
+        ## 捕获多个异常
+
+### 模块
+
+#### 模块的导入
+
+        import module
+        module.function()
+        
+        from module import function
+        function()
+
+        from module import * #表示引入全部功能
+        function()
+
+        ## 可以用as改名
+
+        main #用于模块测试时，不希望在主体函数中显示
+
+        ## 如果将某个量设为all
+        __all__ = ~~~~
+        ## 则import*只会调用__all__的值
+
+
