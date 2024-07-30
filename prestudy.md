@@ -8,11 +8,7 @@
 
 
 
-## Optics
 
-[Geometrical Optics](./GO.md)
-
-[毕设初始结构计算](./Bishe.md)
 
 ## Paper study for the Phd track:
 

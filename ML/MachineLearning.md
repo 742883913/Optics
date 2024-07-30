@@ -28,9 +28,9 @@
     - [Checking if gradient descent is convergent](#checking-if-gradient-descent-is-convergent)
     - [How to choose learning rate](#how-to-choose-learning-rate)
   - [Polynomial regression](#polynomial-regression)
-  - [Logistic regression](#logistic-regression)
-    - [The model of logistic regression](#the-model-of-logistic-regression)
-    - [Decision boundary](#decision-boundary)
+  - [Logistic regression 逻辑回归](#logistic-regression-逻辑回归)
+    - [The model of logistic regression 逻辑回归模型](#the-model-of-logistic-regression-逻辑回归模型)
+    - [Decision boundary 决策边界](#decision-boundary-决策边界)
     - [Cost function of logistic regression](#cost-function-of-logistic-regression)
     - [Gradient descent](#gradient-descent)
 
@@ -69,6 +69,10 @@ Definitions:
 2. cost function: It is used to show how closely the function $f$ fits the real value. It equals to 
    
    $$J=\frac{1}{2m}\sum_{i=1}^m(\widehat{y}^i-y^i)^2$$
+
+> We always defines the expression function of predicted value in linear regression like below.
+> 
+> $$\widehat{y} ^i= \sum_{i=0}^i \omega_ix_i+b$$
 
 We can use contour plots to see the J curve directly like the picture below.
 
@@ -176,13 +180,13 @@ To check if there is a bug, we can use a very small learning rate to see if the 
 
 It's like $y=w_0+w_1x+w_2x^2\cdots$ and in this case, feature scaling becomes more important.
 
-## Logistic regression
+## Logistic regression 逻辑回归
 
 positive class: The set you want and need to output.
 
 negative class: The set you don't want and no need to do output.
 
-### The model of logistic regression
+### The model of logistic regression 逻辑回归模型
 
 <div align="center"><img src="./Mpic/m17.png" width="500"></div>
 
@@ -190,13 +194,23 @@ $$f(\bar{x})=P(y=1|\bar{x};\bar{w},b)$$
 
 Means under the input x, the model think the possibility is 1 and it's under the influence of w and b.
 
-### Decision boundary
+> 这张图实际展示：**z**是我们定义的表达式；**f**是我们的预测函数，其值为**g**函数，**f**最终只会输出0或1。
+
+### Decision boundary 决策边界
 
 The decision boundary is the curve when z=0. It can divide the positive and negative class.
 
-<div align="center"><img src="./Mpic/m18.png" width="200"></div>
+<div align="center"><img src="./Mpic/m18.png" width="600"></div>
 
-### Cost function of logistic regression
+> 在logistic function model下，当 $z>0$ 时，输出1；反之，输出0。所以决策边界可以通过令 $z=0$ 来求出。图中，有两个input variable。
+
+### Cost function of logistic regression 逻辑回归的代价函数
+
+**Why not use the cost function model of linear regression?**
+
+<div align="center"><img src="./Mpic/m18.9.png" width="500"></div>
+
+> Because the linear regression's cost function is not **convex** in logistic regression and it will have many **local minimums**.
 
 **The loss function:**
 

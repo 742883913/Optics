@@ -564,3 +564,13 @@ a|追加。如果文件已存在，则在原文件之后写入；如果不存在
 ### 可视化数据
 
 #### JSON
+
+JSON是一种轻量级的数据交换格式，本质上是带有特定格式的字符串。它是在各个编程语言中流通的数据格式，负责不同语言间的数据传递和交互。
+
+Python的优势在于JSON和它可以无缝衔接，JSON可以看作是Python的一个列表或字典。
+
+        ## Python与JSON的转换
+        import json
+        data = [{'name'=1,'height'=10},{'name'=2,'height'=2}] #得用规范格式去写数据
+        data = json.dumps(data) #将PY数据转换为JSON数据
+        data = json.loads(data) #将JSON数据转换成PY数据
