@@ -259,4 +259,8 @@ $$J = \frac{1}{m}\sum_{i=1}^m -y^i \log f(x^i)-(1-y^i)\log(1-f(x^i))$$
 
 **1.Collect more training examples 收集更多训练样本**
 
+**2.Select features to include 挑选合适的特征**
+
 **2. Regularization to reduce overfitting 正则化以减小过拟合**
+
+<div align="center"><img src="./Mpic/m25.png" width="550"></div>
