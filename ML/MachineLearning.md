@@ -31,8 +31,10 @@
   - [Logistic regression 逻辑回归](#logistic-regression-逻辑回归)
     - [The model of logistic regression 逻辑回归模型](#the-model-of-logistic-regression-逻辑回归模型)
     - [Decision boundary 决策边界](#decision-boundary-决策边界)
-    - [Cost function of logistic regression](#cost-function-of-logistic-regression)
-    - [Gradient descent](#gradient-descent)
+    - [Cost function of logistic regression 逻辑回归的代价函数](#cost-function-of-logistic-regression-逻辑回归的代价函数)
+    - [Gradient descent implementation逻辑回归的梯度下降](#gradient-descent-implementation逻辑回归的梯度下降)
+  - [Overfitting 过拟合](#overfitting-过拟合)
+    - [Ways to reduce overfitting](#ways-to-reduce-overfitting)
 
 
 
@@ -216,6 +218,9 @@ The decision boundary is the curve when z=0. It can divide the positive and nega
 
 <div align="center"><img src="./Mpic/m19.png" width="500"></div>
 
+> 这里的**loss function**象征着线性回归中的**error**部分。当训练集为1时，$f(x)$ 越接近1误差越小；当训练集为0时，$f(x)$ 越接近0误差越小。
+
+
 When $\widehat{y} = 1$ :
 
 <div align="center"><img src="./Mpic/m20.png" width="500"></div>
@@ -238,7 +243,20 @@ Then the cost function will turn into:
 
 $$J = \frac{1}{m}\sum_{i=1}^m -y^i \log f(x^i)-(1-y^i)\log(1-f(x^i))$$
 
-### Gradient descent
+### Gradient descent implementation逻辑回归的梯度下降
 
 <div align="center"><img src="./Mpic/m23.png" width="400"></div>
 
+> **logisitc regression** 的 **gradient descent** 的表达式与 **linear regression** 相同。
+
+## Overfitting 过拟合
+
+<div align="center"><img src="./Mpic/m24.png" width="550"></div>
+
+> **underfitting** :展现出的是较大的偏差(bias)； **overfitting** :展现的是较大的方差(variance)，由于阶数过高，导致样本出现一点偏差都会导致出现不一样的拟合曲线。
+
+### Ways to reduce overfitting
+
+**1.Collect more training examples 收集更多训练样本**
+
+**2. Regularization to reduce overfitting 正则化以减小过拟合**
