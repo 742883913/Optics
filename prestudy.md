@@ -9,12 +9,3 @@
 
 
 
-
-## Paper study for the Phd track:
-
-[1. Fourier ptychographic microscopy image enhancement with bi-modal deep learning](./Paper1.md)
-
-[2. A Physics-Inspired Deep Learning Framework for an Efficient Fourier Ptychographic Microscopy Reconstruction under Low Overlap Conditions
-](./Paper2.md)
-
-[3. Investigating the joint amplitude and phase imaging of stained samples](./Paper3.md)
