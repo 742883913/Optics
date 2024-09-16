@@ -6,3 +6,5 @@
 # Télécom-Sudparis M1
 
 [Computer Science](./M1/CS.md)
+
+[Computer Network](./M1/CN.md)

@@ -77,3 +77,82 @@
         
         return 0;
     }
+
+### Decrement and Increment
+
+> a++和++a的区别
+
+- **a++**
+
+**含义:** 先使用当前值，然后再增加 1。
+
+**操作顺序：**
+
+1. 返回 a 当前的值。
+
+2. a 的值加 1。
+
+- **++a**
+
+**含义：** 先增加 1，然后再使用增加后的值。
+
+**操作顺序：**
+
+1. a 的值加 1。
+
+2. 返回增加后的值。
+
+    #include <stdio.h>
+
+    int main() {
+        int a = 5;
+        
+        // 后置自增
+        int b = a++;  // b = 5, a 变成 6
+        printf("After a++: a = %d, b = %d\n", a, b);
+        
+        a = 5;  // 重置 a 的值为 5
+
+        // 前置自增
+        int c = ++a;  // a 先变成 6, 然后 c = 6
+        printf("After ++a: a = %d, c = %d\n", a, c);
+        
+        return 0;
+        }
+        After a++: a = 6, b = 5
+        After ++a: a = 6, c = 6
+
+### If else 
+
+    if (condition) {
+        // 当 condition 为真时执行的代码
+    } else {
+        // 当 condition 为假时执行的代码
+    }
+
+### Loops
+
+1. **while**
+
+        while(condition){
+            body of the Loops
+        }
+
+2. **do while**
+
+        do{
+            body of loop
+        }
+        while(condition)
+
+3. **for**
+
+        for(initialization;conditon;update){
+            body of loops
+        }
+
+### define a function
+
+    返回类型 函数名(参数类型1, 参数类型2, ...) {
+        // 函数体
+    }
