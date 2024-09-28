@@ -156,3 +156,66 @@
     返回类型 函数名(参数类型1, 参数类型2, ...) {
         // 函数体
     }
+
+> 没有返回值的函数可以用void来定义。
+
+### Array
+
+1. 数组的传递
+
+        void printArray(int arr[], int size) {
+            for(int i = 0; i < size; i++) {
+                printf("%d ", arr[i]);
+            }
+            printf("\n");
+        }
+
+        int main() {
+            int numbers[5] = {1, 2, 3, 4, 5};
+            printArray(numbers, 5);
+            return 0;
+        }
+
+2. 指针在数组中的作用
+
+        int arr[5] = {10, 20, 30, 40, 50};
+        int *p = arr;  // 指向数组的第一个元素
+        printf("%d\n", *p);    // 输出 10
+        printf("%d\n", *(p + 1));  // 输出 20
+
+### pointer
+
+1. malloc与free
+
+        #include <stdio.h>
+        #include <stdlib.h>
+
+        int main() {
+            int n;
+            printf("请输入数组的大小: ");
+            scanf("%d", &n);
+
+            // 动态分配 n 个整数大小的数组
+            int *arr = (int *)malloc(n * sizeof(int));  // 分配 n 个 int 类型的内存
+
+            if (arr == NULL) {
+                // 检查内存分配是否成功
+                printf("内存分配失败\n");
+                return 1;
+            }
+
+            // 初始化并打印数组元素
+            for (int i = 0; i < n; i++) {
+                arr[i] = i + 1;  // 初始化数组元素
+                printf("arr[%d] = %d\n", i, arr[i]);
+            }
+
+            free(arr);  // 释放数组内存
+            return 0;
+        }
+
+### Sort
+
+1. bubble sort
+2. insertion sort
+3. selection sort
